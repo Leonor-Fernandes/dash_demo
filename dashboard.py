@@ -13,6 +13,8 @@ fig_bar = px.bar(agg, x='distrito', y='valor-compra')
 
 
 app = Dash()
+server = app.server
+
 app.layout = html.Div([
     dcc.Graph(figure=fig),
     dcc.Graph(figure=fig_bar)
